@@ -1,0 +1,6 @@
+{
+  "name": "haegis — Minimalist Editorial Portfolio",
+  "description": "The creative portfolio and personal archive of Taiwo Akinyemi (haegis) — poet, physics graduate, and multidisciplinary creator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

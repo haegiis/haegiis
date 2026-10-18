@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-canvas: #FAFAF8;
+  --color-ink: #202020;
+  --color-charcoal: #292929;
+  --color-charcoal-dark: #191919;
+  --color-soft-grey: #E8E8E5;
+  --color-muted: #777777;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: var(--color-canvas);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #202020;
+    color: #FAFAF8;
+  }
+}
+
+/* Custom literary typography classes */
+.font-editorial-serif {
+  font-family: var(--font-serif);
+}
+
+.font-editorial-sans {
+  font-family: var(--font-sans);
+}
+
+.font-editorial-mono {
+  font-family: var(--font-mono);
+}
+
+/* Subtle line link hover effect */
+.editorial-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Smooth custom scroll indicator */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAF8;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4D4D0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+
